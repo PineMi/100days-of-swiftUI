@@ -8,17 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var taps = 0
+    
     var body: some View {
-        NavigationStack {
-            Form {
-                Section {
-                    Text("Hello World")
-                }
-                
-                Section {
-                    Text("Hello World")
-                }
-            }
+        Button("Tap Count Up! \(taps)") {
+            taps += 1
         }
     }
 }
