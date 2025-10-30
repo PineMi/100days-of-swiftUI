@@ -27,6 +27,9 @@ struct ContentView: View {
                     Text("Axis Fun")
                 }
                 
+                NavigationLink(destination: DragBall()) {
+                    Text("Drag Ball")
+                }
                 
             }
         }
