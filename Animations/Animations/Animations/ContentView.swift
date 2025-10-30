@@ -8,21 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var animationAmount = 1.0
     var body: some View {
-        Button("Tap Me") {
-            if animationAmount <= 4 {
-                animationAmount += 0.5
-            } else {
-                animationAmount = 1
+        NavigationStack() {
+            List {
+                NavigationLink(destination: RedScaleButton()) {
+                    Text("Scale Button")
+                }
+                
+                NavigationLink(destination: ColorPingButton()) {
+                    Text("Colorful Button")
+                }
+                
+                NavigationLink(destination: ShapeShifter()) {
+                    Text("Shapeshifter")
+                }
+                
+                NavigationLink(destination: AxisRotations()) {
+                    Text("Axis Fun")
+                }
+                
+                
             }
         }
-        .padding(50)
-        .background(.red)
-        .foregroundStyle(.white)
-        .clipShape(Circle())
-        .scaleEffect(animationAmount)
-        .animation(.default, value: animationAmount)
     }
 }
 
