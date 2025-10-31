@@ -31,6 +31,10 @@ struct ContentView: View {
                     Text("Drag Ball")
                 }
                 
+                NavigationLink(destination: CrazyString()) {
+                    Text("Crazy String")
+                }
+                
             }
         }
     }
