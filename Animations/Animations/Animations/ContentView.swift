@@ -35,6 +35,10 @@ struct ContentView: View {
                     Text("Crazy String")
                 }
                 
+                NavigationLink(destination: CardTricks()) {
+                    Text("Card Trick")
+                }
+                
             }
         }
     }
